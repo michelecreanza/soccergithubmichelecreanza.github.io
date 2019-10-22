@@ -1,14 +1,110 @@
+
+Michele soccer app
+
+
 # soccergithubmichelecreanza.github.io
-soccer
 
-soccer link file:///Users/michelecreanzaair/Desktop/code/soccergithubmichelecreanza.github.io/index.html?
-
+soccer link https://github.com/michelecreanza/soccergithubmichelecreanza.github.io
 
 
 
+
+Technologies Used:
+- api.football-data
+- HTML 
+- CSS 
+- Javascript
+- Jquery
+
+Description:
 
 
 A Competition represents a football league (e.g. Premiere League) or a tournament (e.g. FA-Cup) or a combination of both (e.g. Champions League, having playoffs, a group stage and knock-out rounds). All Competitions can be accessed via a particular id or a human readable code. A Competition consists of Seasons, that hold a number of scheduled games named Matches. A certain number of Teams participate in one particular Season. Since v2 there's even more Resources: Persons appear in squads and lineups as Players and Coaches or in matches as Referees. See all Resources listed on the left and click for example responses and available filters.
+
+Headers
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------
+H1
+H2
+H3
+H4
+H5
+H6
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+Alt-H2
+Emphasis
+Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
+Emphasis, aka italics, with asterisks or underscores.
+
+Strong emphasis, aka bold, with asterisks or underscores.
+
+Combined emphasis with asterisks and underscores.
+
+Strikethrough uses two tildes. Scratch this.
+
+Lists
+(In this example, leading and trailing spaces are shown with with dots: ⋅)
+
+1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
+
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+First ordered list item
+Another item
+Unordered sub-list.
+Actual numbers don't matter, just that it's a number
+
+Ordered sub-list
+
+And another item.
+
+You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+To have a line break without a paragraph, you will need to use two trailing spaces.
+Note that this line is separate, but within the same paragraph.
+(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+Unordered list can use asterisks
+Or minuses
+Or pluses
+Links
+
+
+Resources Used:
+
+https://api.football-data.org/v2/matches
 
 (Sub)Resource	Action	URI	Filters	Sample
 Competition	List all available competitions.	/v2/competitions/	areas={AREAS}
@@ -58,11 +154,6 @@ competitions	String /\d+,\d+/	Comma separated list of competition ids.
 group	String /[A-Z]+/	Allows filtering for groupings in a competition.
 limit	Integer /\d+/	Limits your result set to the given number. Defaults to 10.
 standingType	String /[A-Z]+/	[ TOTAL (default) | HOME | AWAY ]
-
-
-
-
-
 
 
 API info

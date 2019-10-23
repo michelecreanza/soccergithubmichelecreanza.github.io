@@ -6,7 +6,6 @@ My first project is about to begin
 
 pull
 
-<img src="soccer.jpeg" />
 create a branc
 
 Michele soccer app

@@ -125,6 +125,12 @@ $(() => {
 
         $("#match").append($casa);
 
+        const $winner1 = $("<h2>")
+          .text(data.matches[i].score.fullTime.homeTeam)
+          .css("color", "black");
+
+        $("#match").append($winner1);
+
         console.log("matches " + i + ": " + data.matches[i].awayTeam.name);
         const $fucasa = $("<h2>")
           .text(data.matches[i].awayTeam.name)
@@ -132,20 +138,15 @@ $(() => {
 
         $("#match").append($fucasa);
 
-        console.log(
-          "matches " + i + ": " + data.matches[i].score.fullTime.homeTeam
-        );
-        const $winner1 = $("<h2>")
-          .text(data.matches[i].score.fullTime.homeTeam)
-          .css("color", "black");
-
-        $("#match").append($winner1);
-
         const $winner = $("<h2>")
           .text(data.matches[i].score.fullTime.awayTeam)
           .css("color", "blak");
 
         $("#match").append($winner);
+
+        console.log(
+          "matches " + i + ": " + data.matches[i].score.fullTime.homeTeam
+        );
 
         console.log("matches " + i + ": " + data.matches[i].score.winner);
 
@@ -204,19 +205,6 @@ $(() => {
 
         $(SCHEDULED).append($Competizione);
 
-        console.log("matches " + i + ": " + data.matches[i].awayTeam.name);
-        const $away = $("<h2>")
-          .text(data.matches[i].awayTeam.name)
-          .css("color", "blue");
-
-        $(SCHEDULED).append($away);
-
-        const $homeTeam = $("<h2>")
-          .text(data.matches[i].homeTeam.name)
-          .css("color", "blue");
-
-        $(SCHEDULED).append($homeTeam);
-
         console.log("matches " + i + ": " + data.matches[i].utcDate);
         const $utcDate = $("<h2>")
           .text("  Played " + data.matches[i].utcDate)
@@ -224,30 +212,51 @@ $(() => {
 
         $(SCHEDULED).append($utcDate);
 
-        console.log(
-          "matches " + i + ": " + data.matches[i].score.fullTime.awayTeam
-        );
+        const $matchday = $("<h2>")
+          .text("  matchday " + data.matches[i].matchday)
+          .css("color", "red");
+
+        $(SCHEDULED).append($matchday);
+
+        console.log("matches " + i + ": " + data.matches[i].awayTeam.name);
+        const $away = $("<h2>")
+          .text(data.matches[i].awayTeam.name)
+          .css("color", "blue");
+
+        $(SCHEDULED).append($away);
+
         const $awayTeam = $("<h3>")
           .text(data.matches[i].score.fullTime.awayTeam)
           .css("color", "red");
 
         $(SCHEDULED).append($awayTeam);
 
-        console.log(
-          "matches " + i + ": " + data.matches[i].score.fullTime.homeTeam
-        );
+        const $homeTeam = $("<h2>")
+          .text(data.matches[i].homeTeam.name)
+          .css("color", "blue");
+
+        $(SCHEDULED).append($homeTeam);
+
         const $home = $("<h3>")
           .text(data.matches[i].score.fullTime.homeTeam)
           .css("color", "red");
 
         $(SCHEDULED).append($home);
 
-        console.log("matches " + i + ": " + data.matches[i].matchday);
-        const $matchday = $("<h2>")
-          .text("  matchday " + data.matches[i].matchday)
-          .css("color", "red");
+        console.log(
+          "matches " + i + ": " + data.matches[i].score.fullTime.awayTeam
+        );
 
-        $(SCHEDULED).append($matchday);
+        console.log(
+          "matches " + i + ": " + data.matches[i].score.fullTime.homeTeam
+        );
+
+        console.log("matches " + i + ": " + data.matches[i].matchday);
+        // const $matchday = $("<h2>")
+        //   .text("  matchday " + data.matches[i].matchday)
+        //   .css("color", "red");
+
+        // $(SCHEDULED).append($matchday);
 
         console.log("================");
         // }
@@ -365,16 +374,16 @@ $(() => {
 
         $("#giocatore").append($awayTeamt);
 
+        const $awayTeam = $("<h2>")
+          .text(data.matches[i].score.fullTime.awayTeam)
+          .css("color", "green");
+        $("#giocatore").append($awayTeam);
+
         const $homeTeamt = $("<h2>")
           .text(data.matches[i].homeTeam.name)
           .css("color", "black");
 
         $("#giocatore").append($homeTeamt);
-
-        const $awayTeam = $("<h2>")
-          .text(data.matches[i].score.fullTime.awayTeam)
-          .css("color", "green");
-        $("#giocatore").append($awayTeam);
 
         const $homeTeam = $("<h2>")
           .text(data.matches[i].score.fullTime.homeTeam)
@@ -429,34 +438,43 @@ $(() => {
       for (let i = 0; i < data.matches.length; i++) {
         console.log("matches " + i + ": " + data.matches[i].homeTeam.name);
         const $casa = $("<h2>")
-          .text(data.matches[i].homeTeam.name)
-          .css("color", "blue");
+          .text(
+            data.matches[i].score.fullTime.homeTeam +
+              "                       " +
+              data.matches[i].homeTeam.name
+          )
+
+          .css("color", "black");
 
         $("#ultime").append($casa);
 
         console.log("matches " + i + ": " + data.matches[i].awayTeam.name);
         const $fucasa = $("<h2>")
-          .text(data.matches[i].awayTeam.name)
-          .css("color", "blue");
+          .text(
+            data.matches[i].score.fullTime.awayTeam +
+              "                       " +
+              data.matches[i].awayTeam.name
+          )
+          .css("color", "black");
 
         $("#ultime").append($fucasa);
 
         console.log(
           "ultime " + i + ": " + data.matches[i].score.fullTime.homeTeam
         );
-        const $winner1 = $("<h2>")
-          .text(data.matches[i].score.fullTime.homeTeam)
-          .css("color", "black");
+        // const $winner1 = $("<h2>")
+        //   .text(data.matches[i].score.fullTime.homeTeam)
+        //   .css("color", "black");
 
-        $("#ultime").append($winner1);
+        // $("#ultime").append($winner1);
 
-        const $winner = $("<h2>")
-          .text(data.matches[i].score.fullTime.awayTeam)
-          .css("color", "blak");
+        // const $winner = $("<h2>")
+        //   .text(data.matches[i].score.fullTime.awayTeam)
+        //   .css("color", "blak");
 
-        $("#ultime").append($winner);
+        // $("#ultime").append($winner);
 
-        console.log("matches " + i + ": " + data.matches[i].score.winner);
+        // console.log("matches " + i + ": " + data.matches[i].score.winner);
 
         console.log("matches " + i + ": " + data.matches[i].utcDate);
         const $utcDate = $("<h4>")

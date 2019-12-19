@@ -213,10 +213,20 @@ $(() => {
 
         $(SCHEDULED).append($Competizione);
 
-        console.log("matches " + i + ": " + data.matches[i].utcDate);
+        var utcDate = new Date().toLocaleString("en-US", {
+          timeZone: "America/New_York"
+        });
+        utcDate = new Date(utcDate);
+        utcDate = $("<h4>")
+          .text("  NOW " + utcDate.toLocaleString())
+          .css("color", "red");
+        console.log("USA time: " + utcDate.toLocaleString());
+
+        $(SCHEDULED).append(utcDate);
+
         const $utcDate = $("<h2>")
           .text("  Played " + data.matches[i].utcDate)
-          .css("color", "green");
+          .css("color", "black");
 
         $(SCHEDULED).append($utcDate);
 
@@ -584,8 +594,18 @@ $(() => {
 
         console.log("matches " + i + ": " + data.matches[i].utcDate);
         const $utcDate = $("<h4>")
-          .text("  Played " + data.matches[i].utcDate)
+          .text("  Playing " + data.matches[i].utcDate)
           .css("color", "green");
+        var utcDate = new Date().toLocaleString("en-US", {
+          timeZone: "America/New_York"
+        });
+        utcDate = new Date(utcDate);
+        utcDate = $("<h4>")
+          .text("  NOW " + utcDate.toLocaleString())
+          .css("color", "red");
+        console.log("USA time: " + utcDate.toLocaleString());
+
+        $("#ultime1").append(utcDate);
 
         $("#ultime1").append($utcDate);
 

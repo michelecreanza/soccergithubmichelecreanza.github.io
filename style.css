@@ -143,8 +143,8 @@ button {
 
 #standing {
   text-align: center;
-  animation: blink-1 1.5s both;
-  animation: blink-1 1.5s both;
+  /* animation: blink-1 1.5s both;
+  animation: blink-1 1.5s both; */
 }
 
 #schedule {

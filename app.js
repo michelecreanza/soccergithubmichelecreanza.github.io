@@ -47,7 +47,7 @@ $(() => {
       // Standings Array
       for (let i = 0; i < data.standings.length; i++) {
         console.log("Standing " + i + ": " + data.standings[i].stage);
-        const $stage = $("<button>")
+        const $stage = $("<h1>")
           .text(data.standings[i].stage)
           .css("color", "blue");
         $(standing).append($stage);

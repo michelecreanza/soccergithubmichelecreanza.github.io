@@ -44,23 +44,23 @@ nav {
 button {
   background: rgb(123, 143, 226);
   height: 100px;
-  width: 120px;
+  width: 140px;
   text-align: center;
   font-size: larger;
   color: pink;
   float: center;
-  font-size: 25px;
+  font-size: 20px;
 
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 
   align-content: center;
-  transform: blink;
+  /* transform: blink;
 
   animation-name: rainbow-move-change;
 
-  animation-duration: 2s;
+  animation-duration: 2s; */
 }
 
 /*colors, movement and rotation*/
@@ -113,20 +113,20 @@ button {
 }
 #live {
   text-align: center;
-  animation-name: rainbow-move-change;
+  /* animation-name: rainbow-move-change;
 
-  animation-duration: 2s;
+  animation-duration: 2s; */
 }
 
 #match {
   text-align: center;
-  animation: color-change-2x 2s linear infinite alternate both;
-  animation: color-change-2x 2s linear infinite alternate both;
+  /* animation: color-change-2x 2s linear infinite alternate both;
+  animation: color-change-2x 2s linear infinite alternate both; */
 }
 #ultime {
   text-align: center;
-  animation: color-change-2x 2s linear infinite alternate both;
-  animation: color-change-2x 2s linear infinite alternate both;
+  /* animation: color-change-2x 2s linear infinite alternate both;
+  animation: color-change-2x 2s linear infinite alternate both; */
 }
 
 #ultime1 {
@@ -136,29 +136,31 @@ button {
 #giocatore {
   text-align: center;
 
-  animation-name: box-step;
+  /* animation-name: box-step;
 
-  animation-duration: 2s;
+      animation-duration: 2s; */
 }
+
 
 #standing {
   text-align: center;
   /* animation: blink-1 1.5s both;
-  animation: blink-1 1.5s both; */
+  animation: blink-1 1.5s both;  */
 }
 
 #schedule {
   text-align: center;
-  animation-name: rainbow-move;
+  /* animation-name: rainbow-move;
 
-  animation-duration: 2s;
+  animation-duration: 2s; */
+ 
 }
 
 #schedule h1 {
   text-align: center;
+  /* animation: blink-1 2.6s both;
   animation: blink-1 2.6s both;
-  animation: blink-1 2.6s both;
-  transform: scale(2) rotate(30deg) translate(50px);
+  transform: scale(2) rotate(30deg) translate(50px); */
 }
 
 /* ----------------------------------------------

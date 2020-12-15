@@ -33,16 +33,16 @@ $(() => {
       const standing = $("<div id ='standing'>");
       $(".container").append(standing);
 
-      // Competition
-      const $name = $("<h1  >")
-        .text("Standing: " + data.competition.name)
-        .css("color", "red");
-      $(standing).append($name);
-      const $currentMatchday = $("<h1  >")
-        .text("currentMatchday: " + data.season.currentMatchday)
-        .css("color", "pink");
+      // // Competition
+      // const $name = $("<h1  >")
+      //   .text("Standing: " + data.competition.name)
+      //   .css("color", "red");
+      // $(standing).append($name);
+      // const $currentMatchday = $("<h1  >")
+      //   .text("currentMatchday: " + data.season.currentMatchday)
+      //   .css("color", "pink");
 
-      $(standing).append($currentMatchday);
+      // $(standing).append($currentMatchday);
 
       // Standings Array
       for (let i = 0; i < data.standings.length; i++) {
@@ -594,20 +594,34 @@ $(() => {
 
         console.log("matches " + i + ": " + data.matches[i].utcDate);
         const $utcDate = $("<h4>")
-          .text("  Playing " + data.matches[i].utcDate)
+          .text(" Start at" + data.matches[i].utcDate)
           .css("color", "green");
         var utcDate = new Date().toLocaleString("en-US", {
           timeZone: "America/New_York"
         });
         utcDate = new Date(utcDate);
         utcDate = $("<h4>")
-          .text("  NOW " + utcDate.toLocaleString())
+          .text("Real time in USA  " + utcDate.toLocaleString())
           .css("color", "red");
+          
+
+
         console.log("USA time: " + utcDate.toLocaleString());
 
         $("#ultime1").append(utcDate);
 
         $("#ultime1").append($utcDate);
+
+
+        console.log("matches " + i + ": " + data.matches[i].status);
+        const status = $("<h4>")
+          .text("Status  " + data.matches[i].status)
+          .css("color", "red");
+
+      $("#ultime1").append(status);
+        
+
+
 
         console.log("matches " + i + ": " + data.matches[i].matchday);
         const $matchday = $("<h2>")
@@ -808,20 +822,20 @@ $(() => {
 
           $("#ultime2").append($venue);
 
-          const $website = $("<h1  >")
+          const $website = $("<h1>")
             .text("website   " + data.teams[i].website)
             .css("color", "red");
 
           $("#ultime2").append($website);
 
-          const $founded = $("<h1  >")
+          const $founded = $("<h1>")
             .text("founded   " + data.teams[i].founded)
             .css("color", "red");
 
           $("#ultime2").append($founded);
 
-          const $phone = $("<h1  >")
-            .text("phone   " + data.teams[i].phone)
+          const $phone = $("<h1>")
+            .text("phone  " + data.teams[i].phone)
             .css("color", "red");
 
           $("#ultime2").append($phone);

@@ -33,16 +33,19 @@ $(() => {
       const standing = $("<div id ='standing'>");
       $(".container").append(standing);
 
-      // // Competition
-      // const $name = $("<h1  >")
-      //   .text("Standing: " + data.competition.name)
-      //   .css("color", "red");
-      // $(standing).append($name);
-      // const $currentMatchday = $("<h1  >")
-      //   .text("currentMatchday: " + data.season.currentMatchday)
-      //   .css("color", "pink");
 
-      // $(standing).append($currentMatchday);
+      
+
+      // // Competition
+      const $name = $("<h1  >")
+        .text("Standing: " + data.competition.name)
+        .css("color", "red");
+      $(standing).append($name);
+      const $currentMatchday = $("<h1  >")
+        .text("currentMatchday: " + data.season.currentMatchday)
+        .css("color", "black");
+
+      $(standing).append($currentMatchday);
 
       // Standings Array
       for (let i = 0; i < data.standings.length; i++) {
@@ -54,11 +57,11 @@ $(() => {
 
         const div = $("<div>");
         $(standing).append(div);
-        $($stage).on("click", event => {
-          div.empty();
-          const stage = $(event.currentTarget);
+        // $($stage).on("click", event => {
+        //   div.empty();
+        //   const stage = $(event.currentTarget);
 
-          console.log(stage);
+          // console.log(stage);
 
           // Table Array
           for (let j = 0; j < data.standings[i].table.length; j++) {
@@ -74,7 +77,7 @@ $(() => {
               .css("color", "blue");
             div.append($point);
           }
-        });
+        // });
         console.log("================");
       }
     });
@@ -218,7 +221,7 @@ $(() => {
         });
         utcDate = new Date(utcDate);
         utcDate = $("<h4>")
-          .text("  NOW " + utcDate.toLocaleString())
+          .text("Real time in USA " + utcDate.toLocaleString())
           .css("color", "red");
         console.log("USA time: " + utcDate.toLocaleString());
 
@@ -226,28 +229,17 @@ $(() => {
 
         const $utcDate = $("<h2>")
           .text("  Played " + data.matches[i].utcDate)
-          .css("color", "black");
+          .css("color", "green");
 
         $(SCHEDULED).append($utcDate);
 
         const $matchday = $("<h2>")
           .text("  matchday " + data.matches[i].matchday)
-          .css("color", "red");
+          .css("color", "black");
 
         $(SCHEDULED).append($matchday);
 
         console.log("matches " + i + ": " + data.matches[i].awayTeam.name);
-        const $away = $("<h2>")
-          .text(data.matches[i].awayTeam.name)
-          .css("color", "blue");
-
-        $(SCHEDULED).append($away);
-
-        const $awayTeam = $("<h3>")
-          .text(data.matches[i].score.fullTime.awayTeam)
-          .css("color", "red");
-
-        $(SCHEDULED).append($awayTeam);
 
         const $homeTeam = $("<h2>")
           .text(data.matches[i].homeTeam.name)
@@ -255,11 +247,36 @@ $(() => {
 
         $(SCHEDULED).append($homeTeam);
 
+
+        const $away = $("<h2>")
+          .text(data.matches[i].awayTeam.name)
+          .css("color", "blue");
+
+        $(SCHEDULED).append($away);
+
+        // const $awayTeam = $("<h3>")
+        //   .text(data.matches[i].score.fullTime.awayTeam)
+        //   .css("color", "red");
+
+        // $(SCHEDULED).append($awayTeam);
+
+        // const $homeTeam = $("<h2>")
+        //   .text(data.matches[i].homeTeam.name)
+        //   .css("color", "blue");
+
+        // $(SCHEDULED).append($homeTeam);
+
         const $home = $("<h3>")
           .text(data.matches[i].score.fullTime.homeTeam)
           .css("color", "red");
 
         $(SCHEDULED).append($home);
+
+        const $awayTeam = $("<h3>")
+          .text(data.matches[i].score.fullTime.awayTeam)
+          .css("color", "red");
+
+        $(SCHEDULED).append($awayTeam);
 
         console.log(
           "matches " + i + ": " + data.matches[i].score.fullTime.awayTeam
@@ -390,16 +407,16 @@ $(() => {
 
         $("#giocatore").append($status);
 
-        const $awayTeamt = $("<h2>")
-          .text(data.matches[i].awayTeam.name)
-          .css("color", "black");
+        // const $awayTeamt = $("<h2>")
+        //   .text(data.matches[i].awayTeam.name)
+        //   .css("color", "black");
 
-        $("#giocatore").append($awayTeamt);
+        // $("#giocatore").append($awayTeamt);
 
-        const $awayTeam = $("<h2>")
-          .text(data.matches[i].score.fullTime.awayTeam)
-          .css("color", "green");
-        $("#giocatore").append($awayTeam);
+        // const $awayTeam = $("<h2>")
+        //   .text(data.matches[i].score.fullTime.awayTeam)
+        //   .css("color", "green");
+        // $("#giocatore").append($awayTeam);
 
         const $homeTeamt = $("<h2>")
           .text(data.matches[i].homeTeam.name)
@@ -411,6 +428,22 @@ $(() => {
           .text(data.matches[i].score.fullTime.homeTeam)
           .css("color", "green");
         $("#giocatore").append($homeTeam);
+
+
+
+
+        const $awayTeamt = $("<h2>")
+          .text(data.matches[i].awayTeam.name)
+          .css("color", "black");
+
+        $("#giocatore").append($awayTeamt);
+
+        const $awayTeam = $("<h2>")
+          .text(data.matches[i].score.fullTime.awayTeam)
+          .css("color", "green");
+        $("#giocatore").append($awayTeam);
+
+        
 
         const $utcDate = $("<h2>")
           .text("  Played  " + data.matches[i].utcDate)
